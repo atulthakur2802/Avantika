@@ -1,0 +1,202 @@
+/* Reset default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f1; /* Light pink background color */
+}
+
+/* Love Theme */
+.love-theme {
+    background-image: url('love-background.jpg'); /* Replace with your love-themed background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+    padding: 20px; /* Add padding for section content */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 10px;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ff69b4; /* Hot pink for headings */
+    margin-bottom: 10px; /* Add a bit of spacing below headings */
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #91C8E4; /* Light blue text color */
+    margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+/* Images Container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Add spacing between images */
+    margin-top: 20px; /* Add spacing between images and text */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+/* Images */
+.image-container img {
+    width: 200px; /* Set the width */
+    height: 300px; /* Set the height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+}
+
+/* Hover Effect */
+.image-container img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* PIN Overlay */
+.pin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure the overlay is on top of everything */
+}
+
+.pin-container {
+    background-color: #ffffff; /* White background for the PIN overlay */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 0 20px; /* Add margin for spacing from the edges */
+}
+
+.pin-container h2 {
+    color: #ff69b4; /* Hot pink for the PIN overlay heading */
+    margin-bottom: 15px;
+}
+
+.pin-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Limit the input width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin: 0 auto; /* Center the input horizontally */
+    margin-bottom: 15px;
+}
+
+.pin-container button {
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Hot pink for the PIN overlay button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pin-container button:hover {
+    background-color: #ff4785; /* Darker pink on hover */
+}
+
+
+.pin-container h2 {
+    color: #ff69b4; /* Hot pink for the PIN overlay heading */
+    margin-bottom: 15px;
+}
+
+.pin-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.pin-container button {
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Hot pink for the PIN overlay button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pin-container button:hover {
+    background-color: #ff4785; /* Darker pink on hover */
+}
+.heart-container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 1000px; /* Define the perspective for 3D effect */
+}
+
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: rotate 5s linear infinite;
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+}
+
+.heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
