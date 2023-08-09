@@ -200,3 +200,12 @@ p {
         transform: rotateY(360deg);
     }
 }
+ @media (max-width: 768px) {
+            /* Adjust styles for smaller screens here */
+            .love-theme {
+                padding: 20px;
+            }
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
